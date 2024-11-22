@@ -14,13 +14,13 @@ const EarnSection = () => {
             <LockENA />
             <div className='buy-container'>
                 <div className='earn-page-tab'>
-                    <div className={earnTab == "stake" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("stake")}>Stake</div>
-                    <div className={earnTab == "unstake" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("unstake")}>Unstake</div>
-                    <div className={earnTab == "withdraw" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("withdraw")}>Withdraw</div>
+                    <div className={earnTab === "stake" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("stake")}>Stake</div>
+                    <div className={earnTab === "unstake" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("unstake")}>Unstake</div>
+                    <div className={earnTab === "withdraw" ? 'tab-list-active' : 'tab-list'} onClick={() => setEarnTab("withdraw")}>Withdraw</div>
                 </div>
-                {earnTab == "stake" ? <StakeInputBox /> : ""}
-                {earnTab == "unstake" ? <UnStakeInputBox/>  : ""}
-                {earnTab == "withdraw" ? <WithdrawInputBox/>  : ""}
+                {earnTab === "stake" ? <StakeInputBox /> : ""}
+                {earnTab === "unstake" ? <UnStakeInputBox/>  : ""}
+                {earnTab === "withdraw" ? <WithdrawInputBox/>  : ""}
                 
                 <div className='slippage-gas'>
                     <div className='s-g-text1'>Reward Eligible</div>
