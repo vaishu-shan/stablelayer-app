@@ -1,0 +1,46 @@
+.backed-sec {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* width: 100%; */
+  margin: auto;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 1rem;
+  gap: 1.5rem;
+}
+.b-s-head{
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+.linear{
+    position: relative;
+    will-change: transform;
+
+    background: linear-gradient(90deg, rgba(109, 144, 196, 0.32) 17.8687%, rgba(81, 108, 146, 0.404) 67.8688%);
+}
+.linear-inside{
+    background: radial-gradient(45.93% 100% at 50% 50%, rgba(136, 180, 245, 0.5) 0px, transparent 100%);
+    transform: translateX(5.5725%);
+    will-change: transform;
+}
+.sponser-logo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin:15px  auto 0 ;
+    width: 100%;
+}
+.gradient-line {
+    width: 100%; /* Adjust width as needed */
+    height: 2px; /* Adjust thickness as needed */
+    background: linear-gradient(to right, #000, #1a1a1a, #374151, #1a1a1a, #000); /* Colors inspired by the gradient */
+    border: none;
+    display: block;
+  }
+  
+.s-l-img{
+height: 25px;
+filter: invert(1) brightness(2);
+}

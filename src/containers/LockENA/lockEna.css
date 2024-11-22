@@ -1,0 +1,47 @@
+.lock-ena-cont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2.5rem auto -30px;
+}
+.lock-ena-bg{
+    background:#00000073;
+    max-width: 42rem;
+    padding: 1.5rem;
+    border:1px solid rgb(60 72 82);
+    border-radius: 0.5rem;
+}
+.ena-flex{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-width-ena{
+    width: 80%;
+}
+.ena-head{
+    font-weight: 500;
+    font-size: 1.45rem;
+    line-height: 1.75rem;
+    color: rgb(229 231 235 / 1);
+    padding-bottom: 0.5rem;
+}
+.ena-desc{
+    font-size: .875rem;
+    line-height: 1.25rem;
+    color: rgb(189 189 189 /1);
+}
+.lock-ena-cta{
+    font-weight: 700;
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-left: .75rem;
+    padding-right: .75rem;
+    background-color: hsla(0, 0%, 100%, .05);
+    border:1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 0.5rem;
+    color: #fff;
+}

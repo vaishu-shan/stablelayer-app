@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@100..900&display=swap');
+.main-container-two {
+    min-height: calc(100vh - 30px);
+    max-width: 2000px;
+    position: relative;
+    padding: 30px 0;
+  }
+  
+  .layout-background-image {
+    background-image: radial-gradient(
+        circle at top center,
+        #526e9792,
+        transparent
+      ),
+      url(../assets/Images/diag-ascii.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;
+    background-clip: border-box;
+  }
+
+.border-cblue-600 {
+    border: 1px solid #515b70;
+}
+.border-2 {
+    border-width: 2px;
+}
+.rounded-4xl {
+    border-radius: 2rem;
+}
+.mt-6 {
+    margin-top: 1.5rem;
+}
+.mb-2 {
+    margin-bottom: .5rem;
+}
+.gap-5 {
+    gap: 1.25rem;
+}
+.rounded {
+    border-radius: .25rem;
+}
+.whitespace-nowrap {
+    white-space: nowrap;
+}
+.leading-4 {
+    line-height: 1rem;
+}
+.text-white {
+    /* --tw-text-opacity: 1; */
+    color: rgb(255 255 255 / 1);
+}
+.stat {
+    background: radial-gradient(232.36% 214.3% at 124.11% -92.78%, rgba(218, 227, 242, .2) 0, rgba(102, 122, 155, 0) 100%), rgba(28, 32, 41, .8);
+}
+@media (max-width: 600px) {
+    .layout-background-image {
+      background-size: 250%;
+    }
+  }
+  @media (max-width: 1000px) {
+    .layout-background-image {
+      background-position: 0 0;
+    }
+  }

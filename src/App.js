@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+// import './App.css';
+import "./styles/global.css"
+import BuySection from './components/Buy/buy';
+import Navbar from "./containers/Navbar/navbar";
+import { Route, Routes } from "react-router-dom";
+import EarnSection from "./components/Earn/earn";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='main-container-two main-container layout-background-image'>
+        <Navbar />
+        <Routes>
+      <Route path="*" element={<BuySection />} exact />
+      <Route path="/earn" element={<EarnSection />} />
+
+    
+        </Routes>
+      </div>
+    </>
   );
 }
 
