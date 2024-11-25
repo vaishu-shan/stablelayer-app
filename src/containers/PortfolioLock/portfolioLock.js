@@ -96,7 +96,7 @@ const PortfolioLock = () => {
                 <div className='s-g-text1'>Reward Eligible</div>
                 <div className='s-g-text1'>Gas: $3.11</div>
             </div>
-            <div className='earn-disclaimer'>
+            {lockTab==="buy"? "" : <div className='earn-disclaimer'>
                 <IconContext.Provider value={{ color: "#fff", size: '1em' }}>
                     <div style={{ margin: '0 10px 0 0' }}  >
                         <TbInfoHexagon />
@@ -105,7 +105,7 @@ const PortfolioLock = () => {
                 <div className='disclaimer-text'>
                     Locked sENA positions will be available to withdraw 14 days after unlocking.  This is in addition to the 7 day sENA unstaking cooldown.
                 </div>
-            </div>
+            </div>}
             <button className='buy-cta'>Connect Wallet</button>
 
         </div>
