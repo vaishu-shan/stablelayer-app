@@ -180,3 +180,15 @@
   border: 1px solid #cccccc3d;
   cursor: pointer;
 }
+.swap-icon2{
+  display: block;
+  margin: auto;
+  background-color: #000;
+  border-radius: 8px;
+  padding: 8px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  border: 1px solid #cccccc3d;
+  cursor: pointer;
+}

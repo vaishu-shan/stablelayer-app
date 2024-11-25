@@ -4,6 +4,7 @@ import BuySection from './components/Buy/buy';
 import Navbar from "./containers/Navbar/navbar";
 import { Route, Routes } from "react-router-dom";
 import EarnSection from "./components/Earn/earn";
+import PortfolioScreen from "./components/Portfolio/portfolio";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
       <Route path="*" element={<BuySection />} exact />
       <Route path="/earn" element={<EarnSection />} />
+      <Route path="/portfolio" element={<PortfolioScreen />} />
 
     
         </Routes>
