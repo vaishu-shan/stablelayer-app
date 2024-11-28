@@ -7,16 +7,22 @@
   }
   
   .layout-background-image {
-    background-image: radial-gradient(
-        circle at top center,
-        #526e9792,
-        transparent
-      ),
-      url(../assets/Images/diag-ascii.png);
+    position: relative;
+    z-index: 0; 
+  }
+  .layout-background-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place the pseudo-element behind the content */
+    background-image: url(../assets/Images/overallBg.png);
     background-repeat: no-repeat;
     background-position: top;
     background-size: 100% auto;
-    background-clip: border-box;
+    opacity: 0.5; /* Set the opacity for the background image */
   }
 
 .border-cblue-600 {
@@ -54,10 +60,10 @@
     background: radial-gradient(232.36% 214.3% at 124.11% -92.78%, rgba(218, 227, 242, .2) 0, rgba(102, 122, 155, 0) 100%), rgba(28, 32, 41, .8);
 }
 @media (max-width: 600px) {
-    .layout-background-image {
-      background-size: 250%;
-    }
+  .layout-background-image::before {
+    background-size: auto;
   }
+}
   @media (max-width: 1000px) {
     .layout-background-image {
       background-position: 0 0;

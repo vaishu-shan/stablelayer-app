@@ -35,24 +35,9 @@ const Navbar = () => {
                 <div className={`navbar-list ${isActive('/dashboards') ? 'active' : ''}`}>Dashboards</div>
             </div>
             <div class="navbar-right">
-                <div class="metric">
-                    <span>TVL</span>
-                    $3.28B
-                </div>
-                <div class="metric">
-                    <span>APY</span>
-                    29%
-                </div>
-                <div class="metric">
-                    <span>Est. APY</span>
-                    31%
-                </div>
-                <div class="metric">
-                    <span>Users</span>
-                    303.16K
-                </div>
-                <button class="connect-btn">
-                    Connect Wallet  </button>
+                
+            <button class="socials-btn">
+            Connect Wallet  </button>
             </div>
         </div>
 

@@ -11,7 +11,7 @@
 .buy-container {
   min-width: 300px;
   max-width: 472px;
-  background: #00000073;
+  background: #000;
   padding: 1.5rem;
   border-radius: 8px;
   margin-left: auto;
@@ -24,8 +24,8 @@
   justify-content: space-between;
 }
 .cont-head {
-  font-weight: 500;
-  font-size: 1.25rem;
+  font-weight: 700;
+  font-size: 1.35rem;
   line-height: 1.75rem;
 }
 .slippage-gas {
@@ -72,24 +72,27 @@
 }
 
 .single-field {
-  background-color: #000;
+  background-color: #0C0E12;
   padding: 18px 10px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border: 1px solid #373A41;
   /* border: 1px solid #cccccc3d; */
 }
 .field-xs-text {
   color: rgb(126 125 134 /1);
-  font-size: 0.75rem;
+  font-size: 1rem;
   line-height: 1rem;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 .field-xl-text {
-  color: rgb(126 125 134 /1);
+  color: #9c9fa6;
   font-size: 1.2rem;
   font-weight: 500;
+  margin-left: 15px;
+  margin-top: 5px;
 }
 
 .currency-container {
@@ -98,14 +101,15 @@
 }
 
 .currency-selector {
+  position: relative;
+  display: inline-block;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #1c1c1c;
-  border: 1px solid #2c2c2c;
+ 
   border-radius: 12px;
   padding: 8px 12px;
-  width: 115px;
+  width: 65px;
   color: white;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -129,12 +133,24 @@
 
 .dropdown-menu {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 28%;
+  left: 15px;
   background-color: #1c1c1c;
   border: 1px solid #2c2c2c;
   border-radius: 12px;
-  width: 100%;
+  width: 120px;
+  margin-top: 4px;
+  overflow: hidden;
+  z-index: 1000;
+}
+.dropdown2-menu {
+  position: absolute;
+  bottom: -64%;
+  left: 15px;
+  background-color: #1c1c1c;
+  border: 1px solid #2c2c2c;
+  border-radius: 12px;
+  width: 120px;
   margin-top: 4px;
   overflow: hidden;
   z-index: 1000;
@@ -169,16 +185,13 @@
 }
 
 .swap-icon {
-  display: block;
-  margin: auto;
-  background-color: #000;
-  border-radius: 8px;
-  padding: 8px;
-  position: absolute;
-  top: 65px;
-  left: 50%;
-  border: 1px solid #cccccc3d;
-  cursor: pointer;
+    margin: 20px 0;
+    float: left;
+    background-color: #94979C;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid #cccccc3d;
+    cursor: pointer;
 }
 .swap-icon2{
   display: block;
