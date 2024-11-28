@@ -8,6 +8,7 @@ import ghoLogo from "../../assets/Images/gho.png";
 import crvLogo from "../../assets/Images/crvUSD.png";
 import { IconContext } from "react-icons";
 import { GoArrowDown } from "react-icons/go";
+import { LuWallet } from "react-icons/lu";
 
 const BuySection = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -148,11 +149,20 @@ const BuySection = () => {
                     </div>
                 </div>
             </div>
+            <div className='slippage-cta'>
             <div className='slippage-gas'>
-                <div className='s-g-text1'>Max Slippage: 0.10%</div>
-                <div className='s-g-text1'>Gas: $2.97</div>
+                <li className='s-g-text1'>Max Slippage: 0.10%</li>
+                <li className='s-g-text1'>Gas: $2.97</li>
             </div>
-            <button className='buy-cta'>Connect Wallet</button>
+            <button className='buy-cta'>
+            <IconContext.Provider value={{ color: "#fff",  size: '1.2em' }}>
+                    <div style={{marginRight:8}} >
+                    <LuWallet />
+                    </div>
+                </IconContext.Provider>
+                <span> CONNECT WALLET</span></button>
+            </div>
+           
         </div>
 
 
