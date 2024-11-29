@@ -21,7 +21,7 @@
     background-image: url(../assets/Images/overallBg.png);
     background-repeat: no-repeat;
     background-position: top;
-    background-size: 100% auto;
+    /* background-size: 100% auto; */
     opacity: 0.5; /* Set the opacity for the background image */
   }
 

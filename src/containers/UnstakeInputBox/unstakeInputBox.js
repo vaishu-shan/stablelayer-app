@@ -11,12 +11,12 @@ const UnStakeInputBox = () => {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isDropdownToOpen, setIsDropdownToOpen] = useState(false);
     const [selectedCurrency, setSelectedCurrency] = useState({
-        name: "GHO",
-        logo: ghoLogo,
+        name: "USDT",
+        logo: usdtLogo,
     });
     const [selectedToCurrency, setSelectedToCurrency] = useState({
-        name: "DAI",
-        logo: daiLogo,
+        name: "USDe",
+        logo: usdcLogo,
     });
     const [isSwap, setIsSwap] = useState(false)
 
@@ -24,10 +24,13 @@ const UnStakeInputBox = () => {
         { name: "USDT", logo: usdtLogo },
         { name: "USDC", logo: usdcLogo },
         { name: "DAI", logo: daiLogo },
-
+        { name: "GHO", logo: ghoLogo },
+        { name: "crvUSD", logo: crvLogo },
     ];
     const currenciesTo = [
-        { name: "USDe", logo: usdcLogo },
+        { name: "USDT", logo: usdtLogo },
+        { name: "USDC", logo: usdcLogo },
+        { name: "DAI", logo: daiLogo },
         { name: "GHO", logo: ghoLogo },
         { name: "crvUSD", logo: crvLogo },
     ];
@@ -53,25 +56,27 @@ const UnStakeInputBox = () => {
     };
 
     return (
-        <div>
+
+        <div className='stake-box'>
+
             <div className={isSwap ? "buy-input-field-reverse" : 'buy-input-field'}>
+                <div className='field-xs-text'>You Unstake*</div>
                 <div className='single-field field1-border-radius'>
-                    <div style={{}}>
-                        <div className='field-xs-text'>You unstake</div>
-                        <div className='field-xl-text'>0</div>
-                    </div>
-                    <div className="currency-container">
-                        <div className="currency-selector" onClick={toggleDropdown}>
-                            <img
-                                src={selectedCurrency.logo}
-                                alt={`${selectedCurrency.name} Logo`}
-                                className="currency-logo"
-                            />
+                    <div style={{ display: 'flex' }}>
+                        <div style={{ display: 'flex' }} className="currency-selector" onClick={toggleDropdown}>
                             <span className="currency-name">{selectedCurrency.name}</span>
                             <div className="dropdown-icon">
                                 <span>{isDropdownOpen ? "▴" : "▾"}</span>
                             </div>
                         </div>
+                        <div className='field-xl-text'>0</div>
+                    </div>
+                    <div >
+                        <img
+                            src={selectedCurrency.logo}
+                            alt={`${selectedCurrency.name} Logo`}
+                            className="currency-logo"
+                        />
                         {isDropdownOpen && (
                             <div className="dropdown-menu">
                                 {currencies.map((currency) => (
@@ -95,30 +100,29 @@ const UnStakeInputBox = () => {
                     </div>
                 </div>
                 <IconContext.Provider value={{ color: "#fff", className: "swap-icon", size: '1.2em' }}>
-                    <div style={{ margin: '1px auto' }} onClick={swappingToggle} >
+                    <div onClick={swappingToggle} >
                         <GoArrowDown />
                     </div>
                 </IconContext.Provider>
-                <div className='single-field field2-border-radius'>
-                    <div style={{}}>
-                        <div className='field-xs-text'>You Recieve</div>
-                        <div className='field-xl-text'>0</div>
-                    </div>
-                    {/* sdfgdsadfg */}
-                    <div className="currency-container">
-                        <div className="currency-selector" onClick={toggleToDropdown}>
-                            <img
-                                src={selectedToCurrency.logo}
-                                alt={`${selectedToCurrency.name} Logo`}
-                                className="currency-logo"
-                            />
+                <div className='field-xs-text'>You Receive*</div>
+                <div className='single-field field1-border-radius'>
+                    <div style={{ display: 'flex' }}>
+                        <div style={{ display: 'flex' }} className="currency-selector" onClick={toggleToDropdown}>
                             <span className="currency-name">{selectedToCurrency.name}</span>
                             <div className="dropdown-icon">
-                                <span>{isDropdownOpen ? "▴" : "▾"}</span>
+                                <span>{isDropdownToOpen ? "▴" : "▾"}</span>
                             </div>
                         </div>
+                        <div className='field-xl-text'>0</div>
+                    </div>
+                    <div >
+                        <img
+                            src={selectedToCurrency.logo}
+                            alt={`${selectedToCurrency.name} Logo`}
+                            className="currency-logo"
+                        />
                         {isDropdownToOpen && (
-                            <div className="dropdown-menu">
+                            <div className="dropdown2-menu">
                                 {currenciesTo.map((currency) => (
                                     <div
                                         key={currency.name}
@@ -140,8 +144,12 @@ const UnStakeInputBox = () => {
                     </div>
                 </div>
             </div>
+
         </div>
+
+
     )
 }
+
 
 export default UnStakeInputBox

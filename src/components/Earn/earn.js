@@ -6,6 +6,7 @@ import { IconContext } from "react-icons";
 import { TbInfoHexagon } from "react-icons/tb";
 import UnStakeInputBox from '../../containers/UnstakeInputBox/unstakeInputBox';
 import WithdrawInputBox from '../../containers/WithdrawInputBox/withdrawInputBox';
+import { LuWallet } from "react-icons/lu";
 
 const EarnSection = () => {
     const [earnTab, setEarnTab] = useState("stake")
@@ -21,11 +22,6 @@ const EarnSection = () => {
                 {earnTab === "stake" ? <StakeInputBox /> : ""}
                 {earnTab === "unstake" ? <UnStakeInputBox/>  : ""}
                 {earnTab === "withdraw" ? <WithdrawInputBox/>  : ""}
-                
-                <div className='slippage-gas'>
-                    <div className='s-g-text1'>Reward Eligible</div>
-                    <div className='s-g-text1'>Gas: $3.11</div>
-                </div>
                 <div className='earn-disclaimer'>
                     <IconContext.Provider value={{ color: "#fff", size: '1em' }}>
                         <div style={{ margin: '0 10px 0 0' }}  >
@@ -36,8 +32,20 @@ const EarnSection = () => {
                         ENA will be available to withdraw 7 days after unstaking.
                     </div>
                 </div>
-                <button className='buy-cta'>Connect Wallet</button>
-
+                <div className='slippage-cta'>
+                <div className='slippage-gas'>
+                <li className='s-g-text1'>Max Slippage: 0.10%</li>
+                <li className='s-g-text1'>Gas: $2.97</li>
+            </div>
+              
+                <button className='buy-cta'>
+            <IconContext.Provider value={{ color: "#fff",  size: '1.2em' }}>
+                    <div style={{marginRight:8}} >
+                    <LuWallet />
+                    </div>
+                </IconContext.Provider>
+                <span> CONNECT WALLET</span></button>
+</div>
             </div>
         </div>
     )

@@ -47,12 +47,15 @@ width: 38%;
   }
 
   .lock-tab-input{
-        background-color: #000;
-        padding: 18px 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: end;
-margin-top: 1.5rem;
-        /* border: 1px solid #cccccc3d; */
+    background-color: #0C0E12;
+    padding: 18px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #373A41;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
   }

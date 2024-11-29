@@ -38,25 +38,25 @@ const WithdrawInputBox = () => {
 
 
     return (
-        <div>
+        <div className='stake-box'>
             <div className={isSwap ? "buy-input-field-reverse" : 'buy-input-field'}>
+            <div className='field-xs-text'>You Withdraw*</div>
                 <div className='single-field field1-border-radius'>
-                    <div style={{}}>
-                        <div className='field-xs-text'>You withdraw</div>
-                        <div className='field-xl-text'>0</div>
-                    </div>
-                    <div className="currency-container">
-                        <div className="currency-selector" onClick={toggleDropdown}>
-                            <img
-                                src={selectedCurrency.logo}
-                                alt={`${selectedCurrency.name} Logo`}
-                                className="currency-logo"
-                            />
+                    <div style={{ display: 'flex' }}>
+                        <div style={{ display: 'flex' }} className="currency-selector" onClick={toggleDropdown}>
                             <span className="currency-name">{selectedCurrency.name}</span>
                             <div className="dropdown-icon">
                                 <span>{isDropdownOpen ? "▴" : "▾"}</span>
                             </div>
                         </div>
+                        <div className='field-xl-text'>0</div>
+                    </div>
+                    <div >
+                        <img
+                            src={selectedCurrency.logo}
+                            alt={`${selectedCurrency.name} Logo`}
+                            className="currency-logo"
+                        />
                         {isDropdownOpen && (
                             <div className="dropdown-menu">
                                 {currencies.map((currency) => (
