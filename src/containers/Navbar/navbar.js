@@ -18,7 +18,7 @@ const Navbar = () => {
                 <div style={{ color: "#fff", fontWeight: 700, fontSize: 24, marginRight: 10 }}>StableLayer</div>
                 <div className={`navbar-list ${isActive('/portfolio') ? 'active' : ''}`}
                     onClick={() => onScreenRoute('/portfolio')}>Portfolio</div>
-                <div className={`navbar-list ${isActive('/sena') ? 'active' : ''}`}>sENA</div>
+                <div className={`navbar-list ${isActive('/sena') ? 'active' : ''}`} onClick={() => onScreenRoute('/sena')}>sENA</div>
                 <div
                     className={`navbar-list ${isActive('/buy') ? 'active' : ''}`}
                     onClick={() => onScreenRoute('/buy')}

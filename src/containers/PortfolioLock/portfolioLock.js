@@ -11,8 +11,11 @@ import PortfolioStake from '../PortfolioStake/portfolioStake';
 import PortfolioBuy from '../PortfolioBuy/portfolioBuy';
 import { LuWallet } from "react-icons/lu";
 import PortfolioLockTab from '../PortfolioLockTab/portfolioLockTab';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const PortfolioLock = () => {
+    const location = useLocation();
+    console.log("location.pathname", location.pathname)
     const [lockTab, setLockTab] = useState("lock")
     const [innerTab1, setInnerTab1] = useState("lock")
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -36,11 +39,12 @@ const PortfolioLock = () => {
         setIsDropdownOpen(false);
     };
     return (
-        <div className='lock-container'>
+        <div className={location.pathname === "/portfolio" ?'lock-container': "sena-conatiner"}>
             <div className='earn-page-tab'>
                 <div className={lockTab === "lock" ? 'tab-list-lock-active' : 'tab-list-lock'} onClick={() => setLockTab("lock")}>Lock</div>
                 <div className={lockTab === "stake" ? 'tab-list-lock-active' : 'tab-list-lock'} onClick={() => setLockTab("stake")}>Stake</div>
-                <div className={lockTab === "buy" ? 'tab-list-lock-active' : 'tab-list-lock'} onClick={() => setLockTab("buy")}>Buy</div>
+               { location.pathname === "/portfolio" && 
+                <div className={lockTab === "buy" ? 'tab-list-lock-active' : 'tab-list-lock'} onClick={() => setLockTab("buy")}>Buy</div>}
             </div>
 
             {lockTab === "lock" ? 

@@ -224,3 +224,8 @@
   border: 1px solid #cccccc3d;
   cursor: pointer;
 }
+@media screen and (max-width:957px) {
+  .buy-container{
+    margin: 5rem 2rem;
+  }
+}

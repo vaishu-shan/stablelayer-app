@@ -110,3 +110,9 @@
       box-shadow: 0 0 15px #0044ff;
   }
 }
+
+@media screen and (max-width:957px) {
+  .navbar-list{
+    display: none;
+  }
+}

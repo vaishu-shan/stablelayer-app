@@ -152,6 +152,7 @@ const PortfolioScreen = () => {
                         </div>
                     </div>
                 </div>
+                
                 <div className='portfolio-stake-sec'>
                     <div className='portfolio-stake-banner'>
                         <div className='layout-background-image ' style={{padding:'1.5rem',borderRadius:7}}>

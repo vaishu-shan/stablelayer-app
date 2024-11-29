@@ -1,0 +1,126 @@
+.eligible-sena {
+  color: rgb(173 173 173/1);
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.sena-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.sena-list-single {
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  width: 30%;
+  background: radial-gradient(
+      232.36% 214.3% at 124.11% -92.78%,
+      rgba(218, 227, 242, 0.2) 0,
+      rgba(102, 122, 155, 0) 100%
+    ),
+    #000;
+    height: fit-content;
+}
+.sena-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.sena-desc {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-left: 10px;
+  letter-spacing: 0.2px;
+}
+.ecosystem-social-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgb(52 52 58 /1);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  margin-top: 20px;
+}
+.eco-name {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-left: 10px;
+}
+
+/* Container styles */
+.container-month1 {
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+  color: white;
+  border: 1px solid rgb(52 52 58 /1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+/* Dropdown header */
+.dropdown-header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 12px;
+}
+
+.dropdown-content {
+  padding: 10px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+  background-color: #121212;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 2px rgba(72, 155, 255, 0.6);
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.icon.locked {
+  background-color: gray;
+}
+
+.icon.unlocked {
+  background-color: red;
+}
+
+.title {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.points {
+  color: lightblue;
+  font-weight: 500;
+}
+.active-month {
+  margin-right: 15px;
+  color: #88b4f5;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 2px rgba(72, 155, 255, 0.6);
+  font-size: 12px;
+  padding: 5px;
+}
+
+.eth-chart{
+    margin-top: 30px;
+}

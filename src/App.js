@@ -5,6 +5,7 @@ import Navbar from "./containers/Navbar/navbar";
 import { Route, Routes } from "react-router-dom";
 import EarnSection from "./components/Earn/earn";
 import PortfolioScreen from "./components/Portfolio/portfolio";
+import SEnaSection from "./components/sENA/sEna";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="*" element={<BuySection />} exact />
       <Route path="/earn" element={<EarnSection />} />
       <Route path="/portfolio" element={<PortfolioScreen />} />
+      <Route path="/sena" element={<SEnaSection />} />
 
     
         </Routes>
